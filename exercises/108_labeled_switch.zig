@@ -67,7 +67,7 @@ pub fn main() void {
     // how would you fix it?
     pr: switch (PullRequestState.Draft) {
         PullRequestState.Draft => continue :pr PullRequestState.InReview,
-        PullRequestState.InReview => continue :pr PullRequestState.Rejected,
+        PullRequestState.InReview => continue :pr PullRequestState.Approved,
         PullRequestState.Approved => continue :pr PullRequestState.Merged,
         PullRequestState.Rejected => {
             std.debug.print("The pull request has been rejected.\n", .{});
